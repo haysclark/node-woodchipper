@@ -1,0 +1,2 @@
+
+usage: woodchipper [--version] [--help] [--format=<name>] <input>
