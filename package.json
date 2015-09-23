@@ -1,0 +1,24 @@
+{
+  "name": "scrutiny",
+  "version": "0.0.1",
+  "description": "Treeherder to JUnit converter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haysclark/scrutiny.git"
+  },
+  "keywords": [
+    "treeherder",
+    "junit",
+    "unittest"
+  ],
+  "author": "Hays Clark <hays.clark@gmail.com> (http://omita.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/haysclark/scrutiny/issues"
+  },
+  "homepage": "https://github.com/haysclark/scrutiny#readme"
+}
