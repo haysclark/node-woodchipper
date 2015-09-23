@@ -1,0 +1,17 @@
+Name:
+
+       woodchipper - chops up trees
+
+Description:
+
+       Simple Treeherder converter.
+
+Usage:
+
+       woodchipper [--version] [--help] [--format=<name>] <input>
+
+Options:
+
+       -v, --version         output version number
+       -h, --help            output usage information
+       -f, --format          output format (default format is junit)

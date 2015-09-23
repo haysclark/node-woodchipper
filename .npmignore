@@ -1,0 +1,7 @@
+.idea
+.git
+.gitignore
+.travis.yml
+node_modules
+spec
+coverage
