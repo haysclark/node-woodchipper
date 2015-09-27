@@ -1,4 +1,4 @@
-Woodchipper [![Build Status](https://travis-ci.org/haysclark/woodchipper.svg)](https://travis-ci.org/haysclark/woodchipper)[![Coverage Status](https://coveralls.io/repos/haysclark/woodchipper/badge.svg?branch=develop&service=github)](https://coveralls.io/github/haysclark/woodchipper?branch=develop)
+Woodchipper [![Build Status](https://travis-ci.org/haysclark/woodchipper.svg)](https://travis-ci.org/haysclark/woodchipper)[![Coverage Status](https://coveralls.io/repos/haysclark/woodchipper/badge.svg?branch=develop&service=github)](https://coveralls.io/github/haysclark/woodchipper?branch=develop)[![npm version](https://badge.fury.io/js/woodchipper.svg)](http://badge.fury.io/js/woodchipper)
 ===========
 
 A simple module and CLI utility that converts [Treeherder](https://wiki.mozilla.org/Auto-tools/Projects/Treeherder) (the successor to [TBPL](https://wiki.mozilla.org/Sheriffing/TBPL)) output to [JUnit](http://junit.org/) xml.
