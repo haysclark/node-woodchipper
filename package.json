@@ -1,24 +1,41 @@
 {
-  "name": "scrutiny",
-  "version": "0.0.1",
-  "description": "Treeherder to JUnit converter",
-  "main": "index.js",
+  "name": "woodchipper",
+  "version": "0.9.0",
+  "description": "Simple Treeherder converter.",
+  "main": "lib/woodchipper",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm link",
+    "test": "mocha spec -u tdd -R spec --recursive",
+    "coverage": "istanbul cover -x '**/spec/**' ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive --require spec/helpers/chai.js spec"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/haysclark/scrutiny.git"
+    "url": "git+https://github.com/haysclark/woodchipper.git"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "woodchipper": "bin/woodchipper.js"
+  },
+  "dependencies": {
+    "minimist": "~1.2.0"
+  },
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "coveralls": "^2.11.4",
+    "istanbul": "^0.3.21",
+    "mocha": "^2.3.3",
+    "mocha-lcov-reporter": "^1.0.0",
+    "sinon": "^1.17.0"
   },
   "keywords": [
     "treeherder",
     "junit",
-    "unittest"
+    "cli"
   ],
-  "author": "Hays Clark <hays.clark@gmail.com> (http://omita.com)",
+  "author": "Hays Clark",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/haysclark/scrutiny/issues"
+    "url": "https://github.com/haysclark/woodchipper/issues"
   },
-  "homepage": "https://github.com/haysclark/scrutiny#readme"
+  "homepage": "https://github.com/haysclark/woodchipper#readme"
 }

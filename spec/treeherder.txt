@@ -1,0 +1,225 @@
+JPM [info] Starting jpm test on Some Utilities
+Creating XPI
+JPM [info] XPI created at /tmp/@some_utilities-0.0.9.xpi (281ms)
+Created XPI at /tmp/@some_utilities-0.0.9.xpi
+JPM [info] Creating a new profile
+console.info: some_utilities: hiddenWindow document.documentURI:resource://gre-resources/hiddenWindow.html
+console.info: some_utilities: hiddenWindow document.readyState:complete
+Running tests on Firefox 41.0/Gecko 41.0 (Build 20150918100310) ({ec8030f7-c20a-464f-9b0e-13a3a9e97384}) under linux/x86_64.
+TEST-START | ./test/test-container-xml-parser.test container-xml-parser require
+TEST-PASS | ./test/test-container-xml-parser.test container-xml-parser require | container-xml-parser can be require().
+TEST-INFO | [JavaScript Warning: "TypeError: useless expression" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/util/sequence.js" line: 333}]
+TEST-END | ./test/test-container-xml-parser.test container-xml-parser require
+TEST-START | ./test/test-container-xml-parser.test parseForImages works with containerXml
+TEST-PASS | ./test/test-container-xml-parser.test parseForImages works with containerXml | container.xml test data loaded.
+TEST-PASS | ./test/test-container-xml-parser.test parseForImages works with containerXml | parseForImages() returns value.
+TEST-PASS | ./test/test-container-xml-parser.test parseForImages works with containerXml | parseForImages() return expected number of results.
+TEST-END | ./test/test-container-xml-parser.test parseForImages works with containerXml
+TEST-START | ./test/test-container-xml-parser.test parseForSwfs works with containerXml
+TEST-PASS | ./test/test-container-xml-parser.test parseForSwfs works with containerXml | container.xml test data loaded.
+TEST-PASS | ./test/test-container-xml-parser.test parseForSwfs works with containerXml | parseForSwfs() returns value.
+TEST-PASS | ./test/test-container-xml-parser.test parseForSwfs works with containerXml | parseForSwfs() return expected number of results.
+TEST-PASS | ./test/test-container-xml-parser.test parseForSwfs works with containerXml | parseForSwfs() return expected 'title'.
+TEST-PASS | ./test/test-container-xml-parser.test parseForSwfs works with containerXml | parseForSwfs() return expected 'url'.
+TEST-END | ./test/test-container-xml-parser.test parseForSwfs works with containerXml
+TEST-START | ./test/test-container-xml-parser.test parseForVideos works with containerXml
+TEST-PASS | ./test/test-container-xml-parser.test parseForVideos works with containerXml | container.xml test data loaded.
+TEST-PASS | ./test/test-container-xml-parser.test parseForVideos works with containerXml | parseForVideos() returns value.
+TEST-PASS | ./test/test-container-xml-parser.test parseForVideos works with containerXml | parseForVideos() return expected number of results.
+TEST-END | ./test/test-container-xml-parser.test parseForVideos works with containerXml
+TEST-START | ./test/test-container-xml-parser.test parseForVideos works with empty xml
+TEST-PASS | ./test/test-container-xml-parser.test parseForVideos works with empty xml | parseForVideos() returns value.
+TEST-PASS | ./test/test-container-xml-parser.test parseForVideos works with empty xml | parseForVideos() returns empty array
+TEST-END | ./test/test-container-xml-parser.test parseForVideos works with empty xml
+TEST-START | ./test/test-container-xml-parser.test parseForVideos works with null data
+TEST-PASS | ./test/test-container-xml-parser.test parseForVideos works with null data | parseForVideos() returns value.
+TEST-PASS | ./test/test-container-xml-parser.test parseForVideos works with null data | parseForVideos() returns empty array
+TEST-END | ./test/test-container-xml-parser.test parseForVideos works with null data
+TEST-START | ./test/test-guids-model.test GuidsModel API
+TEST-PASS | ./test/test-guids-model.test GuidsModel API | object has initialize method which acts like a constructor.
+TEST-PASS | ./test/test-guids-model.test GuidsModel API | object has guidExistsForTab method which acts like a constructor.
+TEST-PASS | ./test/test-guids-model.test GuidsModel API | object has guidKeysForTab method which acts like a constructor.
+TEST-PASS | ./test/test-guids-model.test GuidsModel API | object has addGuidDataForTab method which acts like a constructor.
+TEST-PASS | ./test/test-guids-model.test GuidsModel API | object has removeGuidDataForTab method which acts like a constructor.
+TEST-PASS | ./test/test-guids-model.test GuidsModel API | object has removeAllGuidDataForTab method which acts like a constructor.
+TEST-PASS | ./test/test-guids-model.test GuidsModel API | object has getGuidDataForTab method which acts like a constructor.
+TEST-END | ./test/test-guids-model.test GuidsModel API
+TEST-START | ./test/test-guids-model.test GuidsModel can be constructed
+TEST-PASS | ./test/test-guids-model.test GuidsModel can be constructed | GuidsModel is a constructor.
+TEST-END | ./test/test-guids-model.test GuidsModel can be constructed
+TEST-START | ./test/test-guids-model.test addGuidDataForTab
+TEST-PASS | ./test/test-guids-model.test addGuidDataForTab | addGuidDataForTab adds guid to tab data
+TEST-PASS | ./test/test-guids-model.test addGuidDataForTab | addGuidDataForTab adds 2nd guid to tab data
+TEST-END | ./test/test-guids-model.test addGuidDataForTab
+TEST-START | ./test/test-guids-model.test getGuidDataForTab
+TEST-PASS | ./test/test-guids-model.test getGuidDataForTab | getGuidDataForTab data for tabId and guid
+TEST-END | ./test/test-guids-model.test getGuidDataForTab
+TEST-START | ./test/test-guids-model.test guidExistsForTab
+TEST-PASS | ./test/test-guids-model.test guidExistsForTab | unknown guid returns false
+TEST-PASS | ./test/test-guids-model.test guidExistsForTab | unknown guid returns true
+TEST-END | ./test/test-guids-model.test guidExistsForTab
+TEST-START | ./test/test-guids-model.test guids-model can be required
+TEST-PASS | ./test/test-guids-model.test guids-model can be required | guids-model can be require()-ed.
+TEST-END | ./test/test-guids-model.test guids-model can be required
+TEST-START | ./test/test-guids-model.test removeAllGuidDataForTab
+TEST-PASS | ./test/test-guids-model.test removeAllGuidDataForTab | removeAllGuidDataForTab has data before run
+TEST-PASS | ./test/test-guids-model.test removeAllGuidDataForTab | removeAllGuidDataForTab returns true on success
+TEST-PASS | ./test/test-guids-model.test removeAllGuidDataForTab | removeAllGuidDataForTab has no data after run
+TEST-END | ./test/test-guids-model.test removeAllGuidDataForTab
+TEST-START | ./test/test-guids-model.test removeGuidDataForTab
+TEST-PASS | ./test/test-guids-model.test removeGuidDataForTab | removeGuidDataForTab returns false when removing unknown tabId
+TEST-PASS | ./test/test-guids-model.test removeGuidDataForTab | removeGuidDataForTab returns false when removing unknown guid
+TEST-PASS | ./test/test-guids-model.test removeGuidDataForTab | verify item was added
+TEST-PASS | ./test/test-guids-model.test removeGuidDataForTab | removeGuidDataForTab returns true when removing is successful
+TEST-PASS | ./test/test-guids-model.test removeGuidDataForTab | removeGuidDataForTab removes guid from tab data
+TEST-END | ./test/test-guids-model.test removeGuidDataForTab
+TEST-START | ./test/test-some-guid-extractor.test fromUrl returns guid for normal url
+TEST-UNEXPECTED-FAIL | ./test/test-some-guid-extractor.test fromUrl returns guid for normal url | fromUrl returns guid for normal url - "de6b3621-734e-4fee-9aed-80238b925059111" == "de6b3621-734e-4fee-9aed-80238b925059"
+TEST-END | ./test/test-some-guid-extractor.test fromUrl returns guid for normal url
+TEST-START | ./test/test-some-guid-extractor.test fromUrl returns null
+TEST-PASS | ./test/test-some-guid-extractor.test fromUrl returns null | fromUrl returns null for unknown urls.
+TEST-END | ./test/test-some-guid-extractor.test fromUrl returns null
+TEST-START | ./test/test-some-guid-extractor.test fromUrl returns object for normal url
+TEST-PASS | ./test/test-some-guid-extractor.test fromUrl returns object for normal url | fromUrl returns object for *://*.some.com/player/container?*.
+TEST-END | ./test/test-some-guid-extractor.test fromUrl returns object for normal url
+TEST-START | ./test/test-some-guid-extractor.test fromUrl returns object for vast url
+TEST-PASS | ./test/test-some-guid-extractor.test fromUrl returns object for vast url | test fromUrl returns object for vast url
+TEST-END | ./test/test-some-guid-extractor.test fromUrl returns object for vast url
+TEST-START | ./test/test-some-guid-extractor.test fromUrl returns object with guid
+TEST-PASS | ./test/test-some-guid-extractor.test fromUrl returns object with guid | fromUrl returns guid for vast url
+TEST-END | ./test/test-some-guid-extractor.test fromUrl returns object with guid
+TEST-START | ./test/test-some-guid-extractor.test fromUrl returns object with subdomain
+TEST-PASS | ./test/test-some-guid-extractor.test fromUrl returns object with subdomain | fromUrl returns subdomain for vast url
+TEST-END | ./test/test-some-guid-extractor.test fromUrl returns object with subdomain
+TEST-START | ./test/test-some-guid-extractor.test fromUrl returns object with url
+TEST-PASS | ./test/test-some-guid-extractor.test fromUrl returns object with url | fromUrl returns url for vast url
+TEST-END | ./test/test-some-guid-extractor.test fromUrl returns object with url
+TEST-START | ./test/test-some-guid-extractor.test require some-guid-extractor
+TEST-PASS | ./test/test-some-guid-extractor.test require some-guid-extractor | some-guid-extractor can be require().
+TEST-END | ./test/test-some-guid-extractor.test require some-guid-extractor
+TEST-START | ./test/test-some-guid-extractor.test2 fromUrl returns subdomain for normal url
+TEST-PASS | ./test/test-some-guid-extractor.test2 fromUrl returns subdomain for normal url | fromUrl returns subdomain for normal url
+TEST-END | ./test/test-some-guid-extractor.test2 fromUrl returns subdomain for normal url
+TEST-START | ./test/test-some-guid-extractor.test3 fromUrl returns subdomain for normal url
+TEST-PASS | ./test/test-some-guid-extractor.test3 fromUrl returns subdomain for normal url | fromUrl returns subdomain for normal url
+TEST-END | ./test/test-some-guid-extractor.test3 fromUrl returns subdomain for normal url
+TEST-START | ./test/test-some-utilities.test some-utilities
+TEST-PASS | ./test/test-some-utilities.test some-utilities | some-utilities can be require().
+TEST-END | ./test/test-some-utilities.test some-utilities
+TEST-START | ./test/test-string-map.test StringMap API
+TEST-PASS | ./test/test-string-map.test StringMap API | object has initialize method which acts like a constructor.
+TEST-PASS | ./test/test-string-map.test StringMap API | object has get method.
+TEST-PASS | ./test/test-string-map.test StringMap API | object has set method.
+TEST-PASS | ./test/test-string-map.test StringMap API | object has remove method.
+TEST-PASS | ./test/test-string-map.test StringMap API | object has exists method.
+TEST-PASS | ./test/test-string-map.test StringMap API | object has removeAll method.
+TEST-PASS | ./test/test-string-map.test StringMap API | object has keys getter.
+TEST-PASS | ./test/test-string-map.test StringMap API | object has toString method.
+TEST-END | ./test/test-string-map.test StringMap API
+TEST-START | ./test/test-string-map.test StringMap can be constructed
+TEST-PASS | ./test/test-string-map.test StringMap can be constructed | StringMap is a constructor.
+TEST-INFO | [JavaScript Warning: "Error in parsing value for 'font-size'.  Declaration dropped." {file: "resource://some_utilities/data/css/style.css" line: 86 column: 12 source: "	font-size: Cantarell, Verdana, sans-serif;"}]
+TEST-INFO | [JavaScript Warning: "Unknown property '-moz-border-radius'.  Declaration dropped." {file: "resource://some_utilities/data/css/style.css" line: 129 column: 19 source: "	-moz-border-radius: 6px;"}]
+TEST-INFO | [JavaScript Warning: "Unknown property '-moz-border-radius'.  Declaration dropped." {file: "resource://some_utilities/data/css/style.css" line: 145 column: 19 source: "	-moz-border-radius: 6px;"}]
+TEST-INFO | [JavaScript Warning: "Unknown property '-moz-border-radius'.  Declaration dropped." {file: "resource://some_utilities/data/css/style.css" line: 171 column: 19 source: "	-moz-border-radius: 6px;"}]
+TEST-INFO | [JavaScript Warning: "Expected 'none', URL, or filter function but found 'Alpha('.  Error in parsing value for 'filter'.  Declaration dropped." {file: "resource://some_utilities/data/css/redmond/jquery-ui-1.10.4.custom.min.css" line: 7 column: 548 source: ".ui-helper-hidden{display:none}.ui-helper-hidden-accessible{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.ui-helper-reset{margin:0;padding:0;border:0;outline:0;line-height:1.3;text-decoration:none;font-size:100%;list-style:none}.ui-helper-clearfix:before,.ui-helper-clearfix:after{content:"";display:table;border-collapse:collapse}.ui-helper-clearfix:after{clear:both}.ui-helper-clearfix{min-height:0}.ui-helper-zfix{width:100%;height:100%;top:0;left:0"}]
+TEST-INFO | [JavaScript Warning: "Expected 'none', URL, or filter function but found 'alpha('.  Error in parsing value for 'filter'.  Declaration dropped." {file: "resource://some_utilities/data/css/redmond/jquery-ui-1.10.4.custom.min.css" line: 7 column: 9040 source: ".ui-helper-hidden{display:none}.ui-helper-hidden-accessible{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.ui-helper-reset{margin:0;padding:0;border:0;outline:0;line-height:1.3;text-decoration:none;font-size:100%;list-style:none}.ui-helper-clearfix:before,.ui-helper-clearfix:after{content:"";display:table;border-collapse:collapse}.ui-helper-clearfix:after{clear:both}.ui-helper-clearfix{min-height:0}.ui-helper-zfix{width:100%;height:100%;top:0;left:0"}]
+TEST-INFO | [JavaScript Warning: "Expected 'none', URL, or filter function but found 'Alpha('.  Error in parsing value for 'filter'.  Declaration dropped." {file: "resource://some_utilities/data/css/redmond/jquery-ui-1.10.4.custom.min.css" line: 7 column: 14471 source: ".ui-helper-hidden{display:none}.ui-helper-hidden-accessible{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.ui-helper-reset{margin:0;padding:0;border:0;outline:0;line-height:1.3;text-decoration:none;font-size:100%;list-style:none}.ui-helper-clearfix:before,.ui-helper-clearfix:after{content:"";display:table;border-collapse:collapse}.ui-helper-clearfix:after{clear:both}.ui-helper-clearfix{min-height:0}.ui-helper-zfix{width:100%;height:100%;top:0;left:0"}]
+TEST-INFO | [JavaScript Warning: "Expected 'none', URL, or filter function but found 'Alpha('.  Error in parsing value for 'filter'.  Declaration dropped." {file: "resource://some_utilities/data/css/redmond/jquery-ui-1.10.4.custom.min.css" line: 7 column: 14621 source: ".ui-helper-hidden{display:none}.ui-helper-hidden-accessible{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.ui-helper-reset{margin:0;padding:0;border:0;outline:0;line-height:1.3;text-decoration:none;font-size:100%;list-style:none}.ui-helper-clearfix:before,.ui-helper-clearfix:after{content:"";display:table;border-collapse:collapse}.ui-helper-clearfix:after{clear:both}.ui-helper-clearfix{min-height:0}.ui-helper-zfix{width:100%;height:100%;top:0;left:0"}]
+TEST-INFO | [JavaScript Warning: "Expected 'none', URL, or filter function but found 'Alpha('.  Error in parsing value for 'filter'.  Declaration dropped." {file: "resource://some_utilities/data/css/redmond/jquery-ui-1.10.4.custom.min.css" line: 7 column: 14696 source: ".ui-helper-hidden{display:none}.ui-helper-hidden-accessible{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.ui-helper-reset{margin:0;padding:0;border:0;outline:0;line-height:1.3;text-decoration:none;font-size:100%;list-style:none}.ui-helper-clearfix:before,.ui-helper-clearfix:after{content:"";display:table;border-collapse:collapse}.ui-helper-clearfix:after{clear:both}.ui-helper-clearfix{min-height:0}.ui-helper-zfix{width:100%;height:100%;top:0;left:0"}]
+TEST-INFO | [JavaScript Warning: "Expected 'none', URL, or filter function but found 'Alpha('.  Error in parsing value for 'filter'.  Declaration dropped." {file: "resource://some_utilities/data/css/redmond/jquery-ui-1.10.4.custom.min.css" line: 7 column: 25167 source: ".ui-helper-hidden{display:none}.ui-helper-hidden-accessible{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.ui-helper-reset{margin:0;padding:0;border:0;outline:0;line-height:1.3;text-decoration:none;font-size:100%;list-style:none}.ui-helper-clearfix:before,.ui-helper-clearfix:after{content:"";display:table;border-collapse:collapse}.ui-helper-clearfix:after{clear:both}.ui-helper-clearfix{min-height:0}.ui-helper-zfix{width:100%;height:100%;top:0;left:0"}]
+TEST-INFO | [JavaScript Warning: "Expected 'none', URL, or filter function but found 'Alpha('.  Error in parsing value for 'filter'.  Declaration dropped." {file: "resource://some_utilities/data/css/redmond/jquery-ui-1.10.4.custom.min.css" line: 7 column: 25332 source: ".ui-helper-hidden{display:none}.ui-helper-hidden-accessible{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.ui-helper-reset{margin:0;padding:0;border:0;outline:0;line-height:1.3;text-decoration:none;font-size:100%;list-style:none}.ui-helper-clearfix:before,.ui-helper-clearfix:after{content:"";display:table;border-collapse:collapse}.ui-helper-clearfix:after{clear:both}.ui-helper-clearfix{min-height:0}.ui-helper-zfix{width:100%;height:100%;top:0;left:0"}]
+TEST-END | ./test/test-string-map.test StringMap can be constructed
+TEST-START | ./test/test-string-map.test exists
+TEST-PASS | ./test/test-string-map.test exists | exists returns false for unknown key
+TEST-PASS | ./test/test-string-map.test exists | exists returns true for known key
+TEST-END | ./test/test-string-map.test exists
+TEST-START | ./test/test-string-map.test get
+TEST-PASS | ./test/test-string-map.test get | get returns null for unkown object
+TEST-PASS | ./test/test-string-map.test get | get returns object for key object
+TEST-END | ./test/test-string-map.test get
+TEST-START | ./test/test-string-map.test keys
+TEST-PASS | ./test/test-string-map.test keys | keys does not return null when empty.
+TEST-PASS | ./test/test-string-map.test keys | keys includes known keys.
+TEST-PASS | ./test/test-string-map.test keys | keys does not expose internal data.
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 2 column: 6134 source: "ll(b))}:function(a,b){var c=a.length,d=0;while(a[c++]=b[d++]);a.length=c-1}}}function fb(a,b,d,e){var f,h,j,k,l,o,r,s,w,"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 2 column: 6343 source: "(1!==(k=b.nodeType)&&9!==k)return[];if(p&&!e){if(f=_.exec(a))if(j=f[1]){if(9===k){if(h=b.getElementById(j),!h||!h.parent"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 2 column: 6353 source: "nodeType)&&9!==k)return[];if(p&&!e){if(f=_.exec(a))if(j=f[1]){if(9===k){if(h=b.getElementById(j),!h||!h.parentNode)retur"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 2 column: 7635 source: "(~a.sourceIndex||D);if(d)return d;if(c)while(c=c.nextSibling)if(c===b)return-1;return a?1:-1}function lb(a){return funct"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 2 column: 9625 source: "],e=0,f=b.getElementsByTagName(a);if("*"===a){while(c=f[e++])1===c.nodeType&&d.push(c);return d}return f},d.find.CLASS=c"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 2 column: 11055 source: "cumentPosition(d)))}:function(a,b){if(b)while(b=b.parentNode)if(b===a)return!0;return!1},B=b?function(a,b){if(a===b)retu"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 2 column: 11651 source: "call(k,b):0;if(f===g)return kb(a,b);c=a;while(c=c.parentNode)h.unshift(c);c=b;while(c=c.parentNode)i.unshift(c);while(h["}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 2 column: 11689 source: "a;while(c=c.parentNode)h.unshift(c);c=b;while(c=c.parentNode)i.unshift(c);while(h[d]===i[d])d++;return d?kb(h[d],i[d]):h"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 2 column: 12650 source: "ates,k=!c.sortStable&&a.slice(0),a.sort(B),l){while(b=a[f++])b===a[f]&&(e=d.push(f));while(e--)a.splice(d[e],1)}return k"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 2 column: 12962 source: "}else if(3===f||4===f)return a.nodeValue}else while(b=a[d++])c+=e(b);return c},d=fb.selectors={cacheLength:50,createPseu"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 2 column: 14759 source: "toLowerCase(),s=!i&&!h;if(q){if(f){while(p){l=b;while(l=l[p])if(h?l.nodeName.toLowerCase()===r:1===l.nodeType)return!1;o"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 2 column: 15023 source: ",l=n&&q.childNodes[n];while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if(1===l.nodeType&&++m&&l===b){k[a]=[w,n,m];break}}else if("}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 2 column: 15171 source: "&j[0]===w)m=j[1];else while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if((h?l.nodeName.toLowerCase()===r:1===l.nodeType)&&++m&&(s"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 2 column: 16219 source: "=p?b.lang:b.getAttribute("xml:lang")||b.getAttribute("lang"))return c=c.toLowerCase(),c===a||0===c.indexOf(a+"-");while("}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 2 column: 18550 source: "tNode"===d,f=x++;return b.first?function(b,c,f){while(b=b[d])if(1===b.nodeType||e)return a(b,c,f)}:function(b,c,g){var h"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 2 column: 18639 source: "a(b,c,f)}:function(b,c,g){var h,i,j=[w,f];if(g){while(b=b[d])if((1===b.nodeType||e)&&a(b,c,g))return!0}else while(b=b[d]"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 2 column: 18699 source: ")if((1===b.nodeType||e)&&a(b,c,g))return!0}else while(b=b[d])if(1===b.nodeType||e){if(i=b[u]||(b[u]={}),(h=i[d])&&h[0]=="}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 2 column: 19976 source: "Type?k(a,c,d):l(a,c,d))}];f>i;i++)if(c=d.relative[a[i].type])m=[rb(sb(m),c)];else{if(c=d.filter[a[i].type].apply(null,a["}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 2 column: 20536 source: "n&&g);q!==x&&null!=(l=u[q]);q++){if(e&&l){m=0;while(o=a[m++])if(o(l,g,h)){i.push(l);break}k&&(w=v)}c&&((l=!o&&l)&&p--,f&"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 2 column: 20644 source: "&&l)&&p--,f&&r.push(l))}if(p+=q,c&&q!==p){m=0;while(o=b[m++])o(r,s,g,h);if(f){if(p>0)while(q--)r[q]||s[q]||(s[q]=G.call("}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 3 column: 14135 source: "ush(b.createTextNode(e));k.textContent="",m=0;while(e=l[m++])if((!d||-1===n.inArray(e,d))&&(i=n.contains(e.ownerDocument"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 3 column: 14262 source: "b(k.appendChild(e),"script"),i&&mb(f),c)){j=0;while(e=f[j++])fb.test(e.type||"")&&c.push(e)}return k},cleanData:function"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: in strict mode code, functions may be declared only at top level or immediately within another function" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 3 column: 18849 source: "margin-top:1px;position:absolute",e.appendChild(f);function g(){f.style.cssText="-webkit-box-sizing:border-box;-moz-box-"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 3 column: 25749 source: "concat(Rb["*"]),f=0,g=e.length;g>f;f++)if(d=e[f].call(c,b,a))return d}function Vb(a,b,c){var d,e,f,g,h,i,j,k,l=this,m={}"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 3 column: 28120 source: ",j.opts.specialEasing);g>f;f++)if(d=Qb[f].call(j,a,k,j.opts))return d;return n.map(k,Ub,j),n.isFunction(j.opts.start)&&j"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 4 column: 90 source: " c,d,e=0,f=b&&b.match(E);if(f&&1===a.nodeType)while(c=f[e++])d=n.propFix[c]||c,n.expr.match.bool.test(c)&&(a[d]=!1),a.re"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 4 column: 1897 source: " "+c.className+" ").replace(ac," "):" ")){f=0;while(e=b[f++])d.indexOf(" "+e+" ")<0&&(d+=e+" ");g=n.trim(d),c.className!"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 4 column: 2341 source: "" "+c.className+" ").replace(ac," "):"")){f=0;while(e=b[f++])while(d.indexOf(" "+e+" ")>=0)d=d.replace(" "+e+" "," ");g="}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 4 column: 2755 source: "ng"===c){var b,d=0,e=n(this),f=a.match(E)||[];while(b=f[d++])e.hasClass(b)?e.removeClass(b):e.addClass(b)}else(c===U||"b"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 4 column: 6062 source: "toLowerCase().match(E)||[];if(n.isFunction(c))while(d=f[e++])"+"===d[0]?(d=d.slice(1)||"*",(a[d]=a[d]||[]).unshift(c)):("}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 4 column: 8548 source: "r:function(a){var b;if(2===t){if(!f){f={};while(b=ic.exec(e))f[b[1].toLowerCase()]=b[2]}b=f[a.toLowerCase()]}return null"}]
+TEST-INFO | [JavaScript Warning: "SyntaxError: test for equality (==) mistyped as assignment (=)?" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/jquery-2.1.1.min.js" line: 4 column: 10441 source: "n{success:1,error:1,complete:1})v[j](k[j]);if(c=sc(oc,k,b,v)){v.readyState=1,i&&m.trigger("ajaxSend",[v,k]),k.async&&k.t"}]
+TEST-INFO | [JavaScript Warning: "ReferenceError: assignment to undeclared variable c" {file: "resource://gre/modules/commonjs/toolkit/loader.js -> resource://gre/modules/commonjs/sdk/loader/sandbox.js -> resource://some_utilities/data/js/css_browser_selector.js" line: 8}]
+TEST-END | ./test/test-string-map.test keys
+TEST-START | ./test/test-string-map.test remove
+TEST-PASS | ./test/test-string-map.test remove | remove deletes object from map.
+TEST-PASS | ./test/test-string-map.test remove | remove deletes key
+TEST-END | ./test/test-string-map.test remove
+TEST-START | ./test/test-string-map.test removeAll
+TEST-PASS | ./test/test-string-map.test removeAll | removeAll can be called when empty
+TEST-PASS | ./test/test-string-map.test removeAll | expected length before removeAll
+TEST-PASS | ./test/test-string-map.test removeAll | removeAll can be called when empty
+TEST-END | ./test/test-string-map.test removeAll
+TEST-START | ./test/test-string-map.test set
+TEST-PASS | ./test/test-string-map.test set | set maps object to key.
+TEST-PASS | ./test/test-string-map.test set | set adds key
+TEST-PASS | ./test/test-string-map.test set | set stomps existing object to key.
+TEST-PASS | ./test/test-string-map.test set | set does not duplicate same keys
+TEST-END | ./test/test-string-map.test set
+TEST-START | ./test/test-string-map.test string-map can be required
+TEST-PASS | ./test/test-string-map.test string-map can be required | string-map can be require()-ed.
+TEST-END | ./test/test-string-map.test string-map can be required
+TEST-START | ./test/test-string-map.test toString
+TEST-PASS | ./test/test-string-map.test toString | toString returns something.
+TEST-PASS | ./test/test-string-map.test toString | keys includes known keys.
+TEST-END | ./test/test-string-map.test toString
+TEST-START | ./test/test-url-request-service.test newing up UrlRequestService
+TEST-PASS | ./test/test-url-request-service.test newing up UrlRequestService | UrlRequestService is a factory.
+TEST-END | ./test/test-url-request-service.test newing up UrlRequestService
+TEST-START | ./test/test-url-request-service.test numSubscribers increments
+TEST-PASS | ./test/test-url-request-service.test numSubscribers increments | numSubscribers returns 1 after subsriber added
+TEST-END | ./test/test-url-request-service.test numSubscribers increments
+TEST-START | ./test/test-url-request-service.test numSubscribers initial value
+TEST-PASS | ./test/test-url-request-service.test numSubscribers initial value | numSubscribers returns 0 subscribers at creation
+TEST-END | ./test/test-url-request-service.test numSubscribers initial value
+TEST-START | ./test/test-url-request-service.test removeSubscriber removed instance
+TEST-PASS | ./test/test-url-request-service.test removeSubscriber removed instance | unsubscribe removes subscribers
+TEST-END | ./test/test-url-request-service.test removeSubscriber removed instance
+TEST-START | ./test/test-url-request-service.test require UrlRequestService
+TEST-PASS | ./test/test-url-request-service.test require UrlRequestService | UrlRequestService can be require().
+TEST-END | ./test/test-url-request-service.test require UrlRequestService
+TEST-START | ./test/test-url-request-service.test subscribe does not add same instance
+TEST-PASS | ./test/test-url-request-service.test subscribe does not add same instance | subscribe only adds unique subscribers
+TEST-END | ./test/test-url-request-service.test subscribe does not add same instance
+TEST-START | ./test/test-url-request-service.test unsubscribe does not error for unknown subscribers
+TEST-PASS | ./test/test-url-request-service.test unsubscribe does not error for unknown subscribers | unsubscribe does not error on unknown subscribers
+TEST-END | ./test/test-url-request-service.test unsubscribe does not error for unknown subscribers
+console.warn: some_utilities: 58 warnings or errors were logged to the platform's nsIConsoleService, which could be of no consequence; however, they could also be indicative of aberrant behavior.
+
+84 of 84 tests passed.
+All tests passed!

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0" failures="1" name="tests" tests="87" time="0.0">
+	<testsuite name="./test/test-container-xml-parser.test" tests="1" failures="0" errors="0">
+		<testcase classname="container-xml-parser require" name="container-xml-parser can be require()." time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-container-xml-parser.test" tests="3" failures="0" errors="0">
+		<testcase classname="parseForImages works with containerXml" name="container.xml test data loaded." time="0.0" />
+		<testcase classname="parseForImages works with containerXml" name="parseForImages() returns value." time="0.0" />
+		<testcase classname="parseForImages works with containerXml" name="parseForImages() return expected number of results." time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-container-xml-parser.test" tests="5" failures="0" errors="0">
+		<testcase classname="parseForSwfs works with containerXml" name="container.xml test data loaded." time="0.0" />
+		<testcase classname="parseForSwfs works with containerXml" name="parseForSwfs() returns value." time="0.0" />
+		<testcase classname="parseForSwfs works with containerXml" name="parseForSwfs() return expected number of results." time="0.0" />
+		<testcase classname="parseForSwfs works with containerXml" name="parseForSwfs() return expected 'title'." time="0.0" />
+		<testcase classname="parseForSwfs works with containerXml" name="parseForSwfs() return expected 'url'." time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-container-xml-parser.test" tests="3" failures="0" errors="0">
+		<testcase classname="parseForVideos works with containerXml" name="container.xml test data loaded." time="0.0" />
+		<testcase classname="parseForVideos works with containerXml" name="parseForVideos() returns value." time="0.0" />
+		<testcase classname="parseForVideos works with containerXml" name="parseForVideos() return expected number of results." time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-container-xml-parser.test" tests="2" failures="0" errors="0">
+		<testcase classname="parseForVideos works with empty xml" name="parseForVideos() returns value." time="0.0" />
+		<testcase classname="parseForVideos works with empty xml" name="parseForVideos() returns empty array" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-container-xml-parser.test" tests="2" failures="0" errors="0">
+		<testcase classname="parseForVideos works with null data" name="parseForVideos() returns value." time="0.0" />
+		<testcase classname="parseForVideos works with null data" name="parseForVideos() returns empty array" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-guids-model.test" tests="7" failures="0" errors="0">
+		<testcase classname="GuidsModel API" name="object has initialize method which acts like a constructor." time="0.0" />
+		<testcase classname="GuidsModel API" name="object has guidExistsForTab method which acts like a constructor." time="0.0" />
+		<testcase classname="GuidsModel API" name="object has guidKeysForTab method which acts like a constructor." time="0.0" />
+		<testcase classname="GuidsModel API" name="object has addGuidDataForTab method which acts like a constructor." time="0.0" />
+		<testcase classname="GuidsModel API" name="object has removeGuidDataForTab method which acts like a constructor." time="0.0" />
+		<testcase classname="GuidsModel API" name="object has removeAllGuidDataForTab method which acts like a constructor." time="0.0" />
+		<testcase classname="GuidsModel API" name="object has getGuidDataForTab method which acts like a constructor." time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-guids-model.test" tests="1" failures="0" errors="0">
+		<testcase classname="GuidsModel can be constructed" name="GuidsModel is a constructor." time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-guids-model.test" tests="2" failures="0" errors="0">
+		<testcase classname="addGuidDataForTab" name="addGuidDataForTab adds guid to tab data" time="0.0" />
+		<testcase classname="addGuidDataForTab" name="addGuidDataForTab adds 2nd guid to tab data" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-guids-model.test" tests="1" failures="0" errors="0">
+		<testcase classname="getGuidDataForTab" name="getGuidDataForTab data for tabId and guid" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-guids-model.test" tests="2" failures="0" errors="0">
+		<testcase classname="guidExistsForTab" name="unknown guid returns false" time="0.0" />
+		<testcase classname="guidExistsForTab" name="unknown guid returns true" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-guids-model.test" tests="1" failures="0" errors="0">
+		<testcase classname="guids-model can be required" name="guids-model can be require()-ed." time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-guids-model.test" tests="3" failures="0" errors="0">
+		<testcase classname="removeAllGuidDataForTab" name="removeAllGuidDataForTab has data before run" time="0.0" />
+		<testcase classname="removeAllGuidDataForTab" name="removeAllGuidDataForTab returns true on success" time="0.0" />
+		<testcase classname="removeAllGuidDataForTab" name="removeAllGuidDataForTab has no data after run" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-guids-model.test" tests="5" failures="0" errors="0">
+		<testcase classname="removeGuidDataForTab" name="removeGuidDataForTab returns false when removing unknown tabId" time="0.0" />
+		<testcase classname="removeGuidDataForTab" name="removeGuidDataForTab returns false when removing unknown guid" time="0.0" />
+		<testcase classname="removeGuidDataForTab" name="verify item was added" time="0.0" />
+		<testcase classname="removeGuidDataForTab" name="removeGuidDataForTab returns true when removing is successful" time="0.0" />
+		<testcase classname="removeGuidDataForTab" name="removeGuidDataForTab removes guid from tab data" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-some-guid-extractor.test" tests="1" failures="1" errors="0">
+		<testcase classname="fromUrl returns guid for normal url" name="fromUrl returns guid for normal url - "de6b3621-734e-4fee-9aed-80238b925059111" == "de6b3621-734e-4fee-9aed-80238b925059"" time="0.0">
+			<failure type="Failure">fromUrl returns guid for normal url - "de6b3621-734e-4fee-9aed-80238b925059111" == "de6b3621-734e-4fee-9aed-80238b925059"
+			</failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="./test/test-some-guid-extractor.test" tests="1" failures="0" errors="0">
+		<testcase classname="fromUrl returns null" name="fromUrl returns null for unknown urls." time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-some-guid-extractor.test" tests="1" failures="0" errors="0">
+		<testcase classname="fromUrl returns object for normal url" name="fromUrl returns object for *://*.some.com/player/container?*." time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-some-guid-extractor.test" tests="1" failures="0" errors="0">
+		<testcase classname="fromUrl returns object for vast url" name="test fromUrl returns object for vast url" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-some-guid-extractor.test" tests="1" failures="0" errors="0">
+		<testcase classname="fromUrl returns object with guid" name="fromUrl returns guid for vast url" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-some-guid-extractor.test" tests="1" failures="0" errors="0">
+		<testcase classname="fromUrl returns object with subdomain" name="fromUrl returns subdomain for vast url" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-some-guid-extractor.test" tests="1" failures="0" errors="0">
+		<testcase classname="fromUrl returns object with url" name="fromUrl returns url for vast url" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-some-guid-extractor.test" tests="1" failures="0" errors="0">
+		<testcase classname="require some-guid-extractor" name="some-guid-extractor can be require()." time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-some-guid-extractor.test2" tests="1" failures="0" errors="0">
+		<testcase classname="fromUrl returns subdomain for normal url" name="fromUrl returns subdomain for normal url" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-some-guid-extractor.test3" tests="1" failures="0" errors="0">
+		<testcase classname="fromUrl returns subdomain for normal url" name="fromUrl returns subdomain for normal url" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-some-utilities.test" tests="1" failures="0" errors="0">
+		<testcase classname="some-utilities" name="some-utilities can be require()." time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-string-map.test" tests="8" failures="0" errors="0">
+		<testcase classname="StringMap API" name="object has initialize method which acts like a constructor." time="0.0" />
+		<testcase classname="StringMap API" name="object has get method." time="0.0" />
+		<testcase classname="StringMap API" name="object has set method." time="0.0" />
+		<testcase classname="StringMap API" name="object has remove method." time="0.0" />
+		<testcase classname="StringMap API" name="object has exists method." time="0.0" />
+		<testcase classname="StringMap API" name="object has removeAll method." time="0.0" />
+		<testcase classname="StringMap API" name="object has keys getter." time="0.0" />
+		<testcase classname="StringMap API" name="object has toString method." time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-string-map.test" tests="1" failures="0" errors="0">
+		<testcase classname="StringMap can be constructed" name="StringMap is a constructor." time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-string-map.test" tests="2" failures="0" errors="0">
+		<testcase classname="exists" name="exists returns false for unknown key" time="0.0" />
+		<testcase classname="exists" name="exists returns true for known key" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-string-map.test" tests="2" failures="0" errors="0">
+		<testcase classname="get" name="get returns null for unkown object" time="0.0" />
+		<testcase classname="get" name="get returns object for key object" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-string-map.test" tests="3" failures="0" errors="0">
+		<testcase classname="keys" name="keys does not return null when empty." time="0.0" />
+		<testcase classname="keys" name="keys includes known keys." time="0.0" />
+		<testcase classname="keys" name="keys does not expose internal data." time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-string-map.test" tests="5" failures="0" errors="0">
+		<testcase classname="remove" name="remove deletes object from map." time="0.0" />
+		<testcase classname="remove" name="remove deletes key" time="0.0" />
+		<testcase classname="remove" name="removeAll can be called when empty" time="0.0" />
+		<testcase classname="remove" name="expected length before removeAll" time="0.0" />
+		<testcase classname="remove" name="removeAll can be called when empty" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-string-map.test" tests="3" failures="0" errors="0">
+		<testcase classname="removeAll" name="removeAll can be called when empty" time="0.0" />
+		<testcase classname="removeAll" name="expected length before removeAll" time="0.0" />
+		<testcase classname="removeAll" name="removeAll can be called when empty" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-string-map.test" tests="4" failures="0" errors="0">
+		<testcase classname="set" name="set maps object to key." time="0.0" />
+		<testcase classname="set" name="set adds key" time="0.0" />
+		<testcase classname="set" name="set stomps existing object to key." time="0.0" />
+		<testcase classname="set" name="set does not duplicate same keys" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-string-map.test" tests="1" failures="0" errors="0">
+		<testcase classname="string-map can be required" name="string-map can be require()-ed." time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-string-map.test" tests="2" failures="0" errors="0">
+		<testcase classname="toString" name="toString returns something." time="0.0" />
+		<testcase classname="toString" name="keys includes known keys." time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-url-request-service.test" tests="1" failures="0" errors="0">
+		<testcase classname="newing up UrlRequestService" name="UrlRequestService is a factory." time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-url-request-service.test" tests="1" failures="0" errors="0">
+		<testcase classname="numSubscribers increments" name="numSubscribers returns 1 after subsriber added" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-url-request-service.test" tests="1" failures="0" errors="0">
+		<testcase classname="numSubscribers initial value" name="numSubscribers returns 0 subscribers at creation" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-url-request-service.test" tests="1" failures="0" errors="0">
+		<testcase classname="removeSubscriber removed instance" name="unsubscribe removes subscribers" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-url-request-service.test" tests="1" failures="0" errors="0">
+		<testcase classname="require UrlRequestService" name="UrlRequestService can be require()." time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-url-request-service.test" tests="1" failures="0" errors="0">
+		<testcase classname="subscribe does not add same instance" name="subscribe only adds unique subscribers" time="0.0" />
+	</testsuite>
+	<testsuite name="./test/test-url-request-service.test" tests="1" failures="0" errors="0">
+		<testcase classname="unsubscribe does not error for unknown subscribers" name="unsubscribe does not error on unknown subscribers" time="0.0" />
+	</testsuite>
+</testsuites>
