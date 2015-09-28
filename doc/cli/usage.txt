@@ -1,2 +1,2 @@
 
-usage: woodchipper [--version] [--help] [--format=<name>] <input>
+usage: woodchipper [--version] [--help] [--format=<name>] [--timeout=<ms>] <input>
