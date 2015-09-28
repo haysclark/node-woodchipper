@@ -8,10 +8,11 @@ Description:
 
 Usage:
 
-       woodchipper [--version] [--help] [--format=<name>] <input>
+       woodchipper [--version] [--help] [--format=<name>] [--timeout=<ms>] <input>
 
 Options:
 
        -v, --version         output version number
        -h, --help            output usage information
        -f, --format          output format (default format is junit)
+       -t, --timeout         stdin timeout in ms
