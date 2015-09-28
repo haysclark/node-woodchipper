@@ -7,21 +7,24 @@ var cli = require('../../lib/cli'),
  * Specification: $ woodchipper [--version] [--help] [--format=<name>] <input>
  */
 describe('cli/argv', function() {
-    var stdinEmitter;
+    //var stdinEmitter;
+    //var realStdin;
+    var stdin;
     beforeEach(function() {
-        sinon.stub(process, 'exit');
-        sinon.stub(process, 'openStdin');
-        stdinEmitter = new EventEmitter;
-        process.openStdin.onFirstCall().returns(stdinEmitter)
+        //stdinEmitter = new EventEmitter;
+        //process.stdin = stdinEmitter;
+        stdin = require('mock-stdin').stdin();
         sinon.stub(console, 'log');
         sinon.stub(console, 'error');
+        sinon.stub(process, 'exit');
     });
 
     afterEach(function() {
-        process.exit.restore();
-        process.openStdin.restore();
         console.log.restore();
         console.error.restore();
+        process.exit.restore();
+        stdin.restore();
+        //process.stdin = realStdin;
     });
 
     describe('#Help', function() {
@@ -68,6 +71,7 @@ describe('cli/argv', function() {
             expect(console.log.called).to.be.true;
         });
 
+       // process.stdin.setEncoding('utf8');
         it('should console.error message when too few args with no data being pipped', function(done) {
             setTimeout(function() {
                 expect(console.error.called).to.be.true;
@@ -83,12 +87,12 @@ describe('cli/argv', function() {
         it('should console.error message when too few args with no data being pipped', function(done) {
             setTimeout(function() {
                 // fake stdin start
-                stdinEmitter.emit('data', 'fakedata');
+                stdin.send('fakedata');
             }, 50);
 
             setTimeout(function() {
                 // fake stdin end
-                stdinEmitter.emit('end');
+                stdin.end();
             }, 500);
 
             setTimeout(function() {
@@ -98,6 +102,72 @@ describe('cli/argv', function() {
             }, 600);
 
             var param = { _: [] };
+            cli.argv(param);
+        });
+
+        it('should error if timeout value is too low', function(done) {
+            setTimeout(function() {
+                expect(console.error.called).to.be.true;
+                expect(process.exit.called).to.be.true;
+                expect(process.exit.getCall(0).args[0]).to.equal(1);
+                done();
+            }, 200);
+
+            var param = { _: [], timeout: -1 };
+            cli.argv(param);
+        });
+
+        it('should error if timeout is not a number', function(done) {
+            setTimeout(function() {
+                expect(console.error.called).to.be.true;
+                expect(process.exit.called).to.be.true;
+                expect(process.exit.getCall(0).args[0]).to.equal(1);
+                done();
+            }, 200);
+
+            var param = { _: [], timeout: "text" };
+            cli.argv(param);
+        });
+
+        it('should set parse timeout when timeout set in cli', function(done) {
+            setTimeout(function() {
+                // fake stdin start
+                stdin.send('fakedata');
+            }, 50);
+
+            setTimeout(function() {
+                // fake stdin end
+                stdin.end();
+            }, 700);
+
+            setTimeout(function() {
+                expect(console.log.called).to.be.true;
+                expect(process.exit.called).to.be.false;
+                done();
+            }, 800);
+
+            var param = { _: [], timeout: 600 };
+            cli.argv(param);
+        });
+
+        it('should set timeout when t set in cli', function(done) {
+            setTimeout(function() {
+                // fake stdin start
+                stdin.send('fakedata');
+            }, 50);
+
+            setTimeout(function() {
+                // fake stdin end
+                stdin.end();
+            }, 700);
+
+            setTimeout(function() {
+                expect(console.log.called).to.be.true;
+                expect(process.exit.called).to.be.false;
+                done();
+            }, 800);
+
+            var param = { _: [], t: 600 };
             cli.argv(param);
         });
 

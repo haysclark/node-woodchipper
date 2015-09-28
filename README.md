@@ -9,7 +9,7 @@ A simple module and CLI utility that converts [Treeherder](https://wiki.mozilla.
 
 ## Usage
 
-    woodchipper [--version] [--help] [--format=<name>] <input>
+    woodchipper [--version] [--help] [--format=<name>] [--timeout=<ms>] <input>
 
 ## Tests
 
@@ -29,5 +29,6 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Release History
 
+* 0.9.1 timeout support added
 * 0.9.0 beta release
 * 0.8.9 alpha release
