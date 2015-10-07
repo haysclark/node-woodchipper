@@ -1,0 +1,70 @@
+jpm test --tbpl
+JPM [info] Starting jpm test on My Jetpack Addon
+Creating XPI
+JPM [info] XPI created at /var/folders/56/6fq80k1x3pl63md097vstl0m0000gn/T/@jpm-test-0.0.1.xpi (60ms)
+Created XPI at /var/folders/56/6fq80k1x3pl63md097vstl0m0000gn/T/@jpm-test-0.0.1.xpi
+JPM [info] Creating a new profile
+console.info: jpm-test: hiddenWindow document.documentURI:chrome://browser/content/hiddenWindow.xul
+console.info: jpm-test: hiddenWindow document.readyState:complete
+Running tests on Firefox 39.0.3/Gecko 39.0.3 ({ec8030f7-c20a-464f-9b0e-13a3a9e97384}) under darwin/x86_64.
+TEST-START | ./test/test-fail.test async fail
+TEST-UNEXPECTED-FAIL | ./test/test-fail.test async fail | this is a async test fail message.
+TEST-INFO | Traceback (most recent call last):
+  File "resource://gre/modules/Promise-backend.js", line 688, in this.PromiseWalker.scheduleWalkerLoop/<
+    DOMPromise.resolve().then(() => this.walkerLoop());
+  File "resource://gre/modules/Promise-backend.js", line 746, in this.PromiseWalker.walkerLoop
+    this.handlers.shift().process();
+  File "resource://gre/modules/Promise-backend.js", line 867, in Handler.prototype.process
+    nextValue = this.onResolve.call(undefined, nextValue);
+  File "resource://gre/modules/commonjs/sdk/deprecated/unit-test.js", line 524, in startMany/runNextTest/<
+    self.start({test: test, onDone: runNextTest});
+  File "resource://gre/modules/commonjs/sdk/deprecated/unit-test.js", line 562, in start
+    this.test.testFunction(this);
+  File "resource://gre/modules/commonjs/sdk/test.js", line 67, in null
+    test(assert, function() {
+  File "resource://jpm-test/test/test-fail.js", line 8, in exports["test async fail"]
+    assert.fail("this is a async test fail message.")
+  File "resource://gre/modules/commonjs/sdk/test/assert.js", line 73, in fail
+    this._log.fail(e);
+  File "resource://gre/modules/commonjs/sdk/deprecated/unit-test.js", line 104, in fail
+    this.console.testMessage(false, false, this.test.name, message);
+  File "resource://gre/modules/commonjs/sdk/test/harness.js", line 544, in testMessage
+    this.trace();
+TEST-END | ./test/test-fail.test async fail
+TEST-START | ./test/test-fail.test fail
+TEST-UNEXPECTED-FAIL | ./test/test-fail.test fail | this is a test fail message.
+TEST-INFO | Traceback (most recent call last):
+  File "resource://gre/modules/Promise-backend.js", line 688, in this.PromiseWalker.scheduleWalkerLoop/<
+    DOMPromise.resolve().then(() => this.walkerLoop());
+  File "resource://gre/modules/Promise-backend.js", line 746, in this.PromiseWalker.walkerLoop
+    this.handlers.shift().process();
+  File "resource://gre/modules/Promise-backend.js", line 867, in Handler.prototype.process
+    nextValue = this.onResolve.call(undefined, nextValue);
+  File "resource://gre/modules/commonjs/sdk/deprecated/unit-test.js", line 524, in startMany/runNextTest/<
+    self.start({test: test, onDone: runNextTest});
+  File "resource://gre/modules/commonjs/sdk/deprecated/unit-test.js", line 562, in start
+    this.test.testFunction(this);
+  File "resource://gre/modules/commonjs/sdk/test.js", line 75, in null
+    test(assert);
+  File "resource://jpm-test/test/test-fail.js", line 4, in exports["test fail"]
+    assert.fail("this is a test fail message.")
+  File "resource://gre/modules/commonjs/sdk/test/assert.js", line 73, in fail
+    this._log.fail(e);
+  File "resource://gre/modules/commonjs/sdk/deprecated/unit-test.js", line 104, in fail
+    this.console.testMessage(false, false, this.test.name, message);
+  File "resource://gre/modules/commonjs/sdk/test/harness.js", line 544, in testMessage
+    this.trace();
+TEST-END | ./test/test-fail.test fail
+TEST-START | ./test/test-pass.test async pass
+TEST-PASS | ./test/test-pass.test async pass | this is a async test pass message.
+TEST-END | ./test/test-pass.test async pass
+TEST-START | ./test/test-pass.test pass
+TEST-PASS | ./test/test-pass.test pass | this is a test pass message.
+TEST-END | ./test/test-pass.test pass
+
+2 of 4 tests passed.
+There were test failures...
+
+The following tests failed:
+  ./test/test-fail.test async fail: failure
+  ./test/test-fail.test fail: failure
