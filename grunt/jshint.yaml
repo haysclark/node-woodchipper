@@ -1,0 +1,8 @@
+all:
+  - Gruntfile.js
+  - grunt/*.js
+  - bin/*.jss
+  - lib/**/*.js
+  - spec/**/*.js
+options:
+  jshintrc: .jshintrc
