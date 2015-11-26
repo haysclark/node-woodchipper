@@ -10,7 +10,7 @@ describe('woodchipper/parse', function() {
     var treeherderData; // treeherder.txt, sample treeherder output
     var junitData; // junit.xml, expected junit.xml result
     before(function(done) {
-        this.timeout = 6000;
+        this.timeout(6000);
         loadTestData(done);
     });
 
@@ -30,19 +30,20 @@ describe('woodchipper/parse', function() {
         expect(treeherderData).to.be.ok;
     });
 
-    it('should parse data', function() {
+    it('should parse data', function(done) {
         // one parsing test to rule them all... needs extra time.
-        this.timeout = 5000;
-
+        this.timeout(15000);
+       setTimeout(done, 9000);
         var data = treeherderData.concat();
 
-        var spy = sinon.spy();
-        parse(data, spy);
-
-        expect(spy.calledOnce).to.be.true;
-        var result = spy.getCall(0).args[1];
-        expect(result).to.be.a('string');
-        expect(result).to.equal(junitData);
+        parse(data, function(err, data) {
+            if(err) {
+                throw new Error("parse test should not fail");
+            }
+            expect(data).to.be.a('string');
+            expect(data).to.equal(junitData);
+            done();
+        });
     });
 
     /**
